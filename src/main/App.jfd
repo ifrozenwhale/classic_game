@@ -1,0 +1,111 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 550, 600 )
+			"name": "frame"
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", true ) )
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "toolBar1"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"minimumSize": new java.awt.Dimension( 210, 120 )
+				"maximumSize": new java.awt.Dimension( 410, 150 )
+				"preferredSize": new java.awt.Dimension( 162, 30 )
+				"enabled": false
+				"margin": new java.awt.Insets( 15, 0, 0, 0 )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator7"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "startButton"
+					"text": "开始游戏"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"minimumSize": new java.awt.Dimension( 100, 60 )
+					"maximumSize": new java.awt.Dimension( 200, 100 )
+					"background": &Color0 new java.awt.Color( 197, 91, 22, 255 )
+					"foreground": &Color1 new java.awt.Color( 222, 221, 221, 255 )
+					"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( "Arial Unicode MS", 0, 1, false )
+					"preferredSize": new java.awt.Dimension( 200, 24 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "startButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator5"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "giveUpButton"
+					"text": "投降"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"maximumSize": new java.awt.Dimension( 200, 100 )
+					"minimumSize": new java.awt.Dimension( 100, 60 )
+					"background": #Color0
+					"foreground": #Color1
+					"font": #SwingDerivedFont0
+					"preferredSize": new java.awt.Dimension( 200, 24 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "giveUpButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator6"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "toolBar2"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator3"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "currLabel"
+					"text": "当前"
+					"maximumSize": new java.awt.Dimension( 50, 50 )
+					"preferredSize": new java.awt.Dimension( 50, 30 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #SwingDerivedFont0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator2"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "currentUser"
+					"text": "黑棋"
+					"maximumSize": new java.awt.Dimension( 100, 50 )
+					"preferredSize": new java.awt.Dimension( 100, 35 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"background": new java.awt.Color( 0, 0, 0, 255 )
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					"font": #SwingDerivedFont0
+					"horizontalAlignment": 0
+					"minimumSize": new java.awt.Dimension( 100, 18 )
+					"opaque": true
+					"horizontalTextPosition": 0
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "separator4"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "chessBoard"
+				auxiliary() {
+					"JavaCodeGenerator.className": "ChessBoard"
+					"JavaCodeGenerator.variableName": "chessboard"
+				}
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "chessBoardMouseClicked", true ) )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 185, 145 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
